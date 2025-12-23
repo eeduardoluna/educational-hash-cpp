@@ -11,6 +11,13 @@ The hash function processes the input byte by byte, updating a 64-bit internal s
 Each byte is mixed using bitwise operations and integer arithmetic to spread small input changes across the output.
 The final value depends deterministically on all input bytes.
 
+## API
+uint64_t simple_hash(const std::string& input);
+Input : arbitrary string to be hashed
+Output : Deterministic 64-bit hash value
+  - Time complexity : O(n) where n is the length of the input string.
+  - Space complexity : O(1)
+
 ## Disclaimer 
 This project is for learning purposes only.  
 It is **not cryptographically secure** and must not be used in real-world applications.
