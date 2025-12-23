@@ -1,6 +1,6 @@
 # educational-hash-cpp
 Simple 64-bit hash implementation in C++.
-This repository contains an implementation of a simple hash function created strictly for educational purposes.
+This repository contains a simple 64-bit hash function implemented in C++, based on the FNV-1a hashing scheme, created strictly for educational purposes.
 The main goal is to demonstrate basic ideas behind hash functions, such as: 
 - Mapping arbitrary data to fixed-size values
 - Determinism (same input → same output)
@@ -10,6 +10,14 @@ The main goal is to demonstrate basic ideas behind hash functions, such as:
 The hash function processes the input byte by byte, updating a 64-bit internal state.
 Each byte is mixed using bitwise operations and integer arithmetic to spread small input changes across the output.
 The final value depends deterministically on all input bytes.
+
+## Security Analisys
+- From a security perspective, this hash function provides no resistance against deliberate collision attacks and should not be considered secure against adversarial inputs.
+- It is vulnerable to hash flooding and does not provide strong avalanche properties required for cryptographic or security-sensitive use cases.
+
+## Known Weakness
+- Known limitations of this hash function include weak diffusion, predictable structure, and lack of collision resistance.
+- Small or structured input variations may not sufficiently affect all output bits.
 
 ## API
 uint64_t simple_hash(const std::string& input);
