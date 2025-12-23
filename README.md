@@ -6,6 +6,11 @@ The main goal is to demonstrate basic ideas behind hash functions, such as:
 - Determinism (same input → same output)
 - Basic bitwise and arithmetic operations
 
+## How it Works 
+The hash function processes the input byte by byte, updating a 64-bit internal state.
+Each byte is mixed using bitwise operations and integer arithmetic to spread small input changes across the output.
+The final value depends deterministically on all input bytes.
+
 ## Disclaimer 
 This project is for learning purposes only.  
 It is **not cryptographically secure** and must not be used in real-world applications.
