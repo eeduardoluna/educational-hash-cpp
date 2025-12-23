@@ -13,8 +13,8 @@ The final value depends deterministically on all input bytes.
 
 ## API
 uint64_t simple_hash(const std::string& input);
-Input : arbitrary string to be hashed.
-Output : Deterministic 64-bit hash value.
+- Input : arbitrary string to be hashed.
+- Output : Deterministic 64-bit hash value.
   - Time complexity : O(n) where n is the length of the input string.
   - Space complexity : O(1)
 
